@@ -1,0 +1,470 @@
+// this is exp1 and exp2
+
+// import 'package:flutter/material.dart';
+//
+// void main() => runApp(MyApp());
+// class MyApp extends StatelessWidget{
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       title: 'hello world',
+//       home: Scaffold(
+//         appBar: AppBar(
+//           title: Text('hello world'),
+//         ),
+//         body:Center(
+//           child: Text('hello world'),
+//
+//         ),
+//         floatingActionButton: FloatingActionButton(
+//             onPressed: (){
+//               Navigator.push(
+//                 context,
+//                  MaterialPageRoute(builder: (context) => const FirstPage()),
+//                 );
+//             }),
+//
+//       ),
+//     );
+//   }
+// }
+//
+// class FirstPage extends StatelessWidget {
+//   const FirstPage({super.key});
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text('First page'),
+//       ),
+//       body:Center(
+//         child: Text('First page'),
+//
+//       ),
+//       floatingActionButton: FloatingActionButton(
+//           onPressed: (){
+//             print('hello');
+//           }),
+//
+//     );
+//   }
+// }
+
+
+
+
+ // this is new code exp5
+// main.dart
+// import 'package:flutter/material.dart';
+//
+// void main() {
+//   runApp(const MyApp());
+// }
+//
+// class MyApp extends StatelessWidget {
+//   const MyApp({super.key});
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       title: 'Simple Flutter App',
+//       theme: ThemeData(
+//         primarySwatch: Colors.blue,
+//       ),
+//       home: const FirstPage(),
+//     );
+//   }
+// }
+//
+// class FirstPage extends StatelessWidget {
+//   const FirstPage({super.key});
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: const Text('First Page'),
+//       ),
+//       body: Center(
+//         child: ElevatedButton(
+//           onPressed: () {
+//             Navigator.push(
+//               context,
+//               MaterialPageRoute(builder: (context) => const SecondPage()),
+//             );
+//           },
+//           child: const Text('Go to Second Page'),
+//         ),
+//       ),
+//     );
+//   }
+// }
+//
+// class SecondPage extends StatelessWidget {
+//   const SecondPage({super.key});
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: const Text('Second Page'),
+//         leading: IconButton(
+//           icon: const Icon(Icons.arrow_back),
+//           onPressed: () {
+//             Navigator.pop(context);
+//           },
+//         ),
+//       ),
+//       body: const Center(
+//         child: Text('This is the second page'),
+//       ),
+//     );
+//   }
+// }
+
+
+// this is new code exp5 only
+
+// import 'package:flutter/material.dart';
+//
+// void main() {
+//   runApp(MyApp());
+// }
+//
+// class MyApp extends StatelessWidget {
+//   const MyApp({super.key});
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: DefaultTabController(length: 3,
+//           child: Scaffold(
+//            appBar: AppBar(
+//              title: Text("tab_bar"),
+//              bottom : TabBar(
+//                  tabs: [
+//                    Tab(text: 'tab1'),
+//                    Tab(text: 'tab2'),
+//                    Tab(text: 'tab3')
+//     ]
+//            ),
+//           ),
+//     body: TabBarView(
+//      children: [
+//        Center(child : Text('tab1')),
+//        Center(child : Text('tab1')),
+//        Center(child : Text('tab1'))
+//     ] )
+//
+//       )
+//     )
+//     );
+//   }
+// }
+
+
+
+
+
+// code of 6th exp
+
+// import 'package:flutter/material.dart';
+//
+// void main() => runApp(MaterialApp(home: MyApp()));
+//
+// class MyApp extends StatefulWidget {
+//   @override
+//   MyAppState createState() => MyAppState();
+// }
+//
+// class MyAppState extends State<MyApp> {
+//   bool toggle = false;
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       body: Center(
+//         child: AnimatedContainer(
+//           duration: Duration(seconds: 1),
+//           width: toggle ? 200 : 100,
+//           height: toggle ? 200 : 100,
+//           color: toggle ? Colors.red : Colors.blue,
+//         ),
+//       ),
+//       floatingActionButton: FloatingActionButton(
+//         onPressed: () => setState(() => toggle = !toggle),
+//         child: Icon(Icons.play_arrow),
+//       ),
+//     );
+//   }
+// }
+
+
+
+
+
+
+// exp 7
+
+//
+// import 'package:flutter/material.dart';
+//
+// void main() => runApp(MaterialApp(home: MyForm()));
+//
+// class MyForm extends StatelessWidget {
+//   final _formKey = GlobalKey<FormState>();
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       body: Form(
+//         key: _formKey,
+//         child: Column(
+//           // mainAxisAlignment: MainAxisAlignment.center,
+//           children: [
+//             TextFormField(
+//               decoration: InputDecoration(hintText: "Name"),
+//               validator: (v) => v!.isEmpty ? "Enter name" : null,
+//             ),
+//             TextFormField(
+//               decoration: InputDecoration(hintText: "Password"),
+//               obscureText: true,
+//               validator: (v) => v!.length < 4 ? "Min 4 chars" : null,
+//             ),
+//             TextFormField(
+//               decoration: InputDecoration(hintText: "email"),
+//               validator: (v) => v!.isEmpty ? "Enter email" : null,
+//             ),
+//             ElevatedButton(
+//               onPressed: () {
+//                 if (_formKey.currentState!.validate()) {
+//                   print("Form is valid");
+//                 }
+//               },
+//               child: Text("Submit"),
+//             )
+//           ],
+//         ),
+//       ),
+//     );
+//   }
+// }
+
+
+
+
+
+
+
+
+
+
+
+// exp9 html
+
+
+// <!DOCTYPE html>
+// <html lang="en">
+// <head>
+// <meta charset="UTF-8">
+// <meta name="viewport" content="width=device-width, initial-scale=1.0">
+// <title>Document</title>
+// </head>
+// <body>
+// <h1>Service Worker</h1>
+// <script>
+//
+//
+// if ('serviceWorker' in navigator) {
+// navigator.serviceWorker.register('./sw.js')
+//     .then(function(registration) {
+// console.log('Service Worker registered with scope:', registration.scope);
+// })
+//     .catch(function(error) {
+// console.error('Service Worker registration failed:', error);
+// });
+// } else {
+// console.warn('Service Worker not supported in this browser.');
+// }
+//
+// </script>
+//
+// </body>
+// </html>
+
+
+
+// exp4 code
+
+// import 'package:flutter/material.dart';
+// import 'package:fl_chart/fl_chart.dart';
+//
+// void main() => runApp(MySimpleApp());
+//
+// class MySimpleApp extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: Scaffold(
+//         appBar: AppBar(title: Text('Simple Icons & Chart')),
+//         body: Column(
+//           children: [
+//             // Icons Row
+//             Padding(
+//               padding: const EdgeInsets.all(16.0),
+//               child: Row(
+//                 mainAxisAlignment: MainAxisAlignment.spaceAround,
+//                 children: [
+//                   Icon(Icons.home, color: Colors.blue),
+//                   Icon(Icons.star, color: Colors.orange),
+//                   Icon(Icons.settings, color: Colors.grey),
+//                 ],
+//               ),
+//             ),
+//             // Bar Chart
+//             SizedBox(
+//               height: 200,
+//               child: BarChart(
+//                 BarChartData(
+//                   borderData: FlBorderData(show: false),
+//                   titlesData: FlTitlesData(show: false),
+//                   barGroups: [
+//                     BarChartGroupData(x: 0, barRods: [
+//                       BarChartRodData(toY: 3, color: Colors.blue),
+//                     ]),
+//                     BarChartGroupData(x: 1, barRods: [
+//                       BarChartRodData(toY: 4, color: Colors.green),
+//                     ]),
+//                     BarChartGroupData(x: 2, barRods: [
+//                       BarChartRodData(toY: 2, color: Colors.red),
+//                     ]),
+//                   ],
+//                 ),
+//               ),
+//             ),
+//           ],
+//         ),
+//       ),
+//     );
+//   }
+// }
+
+// dependencies:
+// flutter:
+// sdk: flutter
+// fl_chart: ^0.64.0
+//
+// in yaml
+
+
+
+
+
+
+
+
+// exp1 steps:
+//
+//
+// ✅ Step 1: Install Flutter SDK
+// 🖥️ For Windows / macOS / Linux:
+// Go to https://flutter.dev/docs/get-started/install
+//
+// Choose your OS (Windows/macOS/Linux)
+//
+// Download the Flutter SDK
+//
+// Extract it to a folder (e.g. C:\src\flutter on Windows)
+//
+// 💡 DO NOT install in Program Files or any folder with spaces.
+//
+// ✅ Step 2: Add Flutter to System Path
+// 🪟 On Windows:
+// Open System Properties > Environment Variables
+//
+// In User Variables, edit the Path variable
+//
+// Add this:
+//
+// makefile
+// Copy
+// Edit
+// C:\src\flutter\bin
+// 🍎 On macOS/Linux:
+// Add this line to your .zshrc, .bashrc, or .bash_profile:
+//
+// bash
+// Copy
+// Edit
+// export PATH="$PATH:/path/to/flutter/bin"
+// Then run:
+//
+// bash
+// Copy
+// Edit
+// source ~/.zshrc  # or the correct file for your shell
+// ✅ Step 3: Run flutter doctor
+// Open Terminal (or CMD) and run:
+//
+// bash
+// Copy
+// Edit
+// flutter doctor
+// This checks your setup and tells you what's missing. Follow the suggestions it gives!
+//
+// ✅ Step 4: Install Android Studio
+// Download Android Studio: https://developer.android.com/studio
+//
+// Install it.
+//
+// In Android Studio:
+//
+// Go to Settings > Plugins
+//
+// Search for and install:
+// ✅ Flutter
+// ✅ Dart
+//
+// Restart Android Studio if needed.
+//
+// ✅ Step 5: Set Up Android Emulator (Optional but Useful)
+// In Android Studio, go to Tools > Device Manager
+//
+// Click Create Device
+//
+// Choose a Pixel phone or similar
+//
+// Download a recommended system image (e.g., Android 13)
+//
+// Launch the emulator
+//
+// ✅ Step 6: Create and Run Your First Flutter App
+// In Android Studio:
+//
+// File > New > New Flutter Project
+//
+// Choose "Flutter Application"
+//
+// Select Flutter SDK path
+//
+// Give project name and location
+//
+// Finish — wait for it to generate code
+//
+// Click Run ▶️ to launch on emulator or connected phone
+//
+// 🛠 Bonus: Common Commands
+// Run app: flutter run
+//
+// Check config: flutter doctor
+//
+// Upgrade Flutter: flutter upgrade
+/
+// Create project: flutter create my_app
+//
+//
+//
+
+
+
